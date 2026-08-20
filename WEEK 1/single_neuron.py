@@ -1,18 +1,15 @@
 import math
-import sys
-input = sys.stdin.readline
 
-n = int(input())
-prev_act_list = list(map(float, input().split()))
-weight_list = list(map(float, input().split()))
-bias = float(input())
+prev_activations = [0.5, 0.8, 0.2]
+weights = [0.4, -0.6, 0.9]
+bias = 0.1
 
 def sigmoid(x):
     return 1 / (1 + (math.exp(-x)))
 
 def main():
     result = 0
-    for a, b in zip(prev_act_list, weight_list):
+    for a, b in zip(prev_activations, weights):
         result += (a * b)
     result_with_bias = result + bias
     
