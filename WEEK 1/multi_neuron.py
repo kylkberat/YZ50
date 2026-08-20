@@ -1,16 +1,12 @@
 import math
-import sys
 
 prev_activations = [0.5, 0.8, 0.2]
-
 weights = [
     [0.4, -0.6, 0.9],
     [0.1, 0.7, -0.3],
     [0.6, -1.3, 0.8]
 ]
-
 biases = [0.1, -0.2, -0.75]
-
 new_activations = []
 
 def sigmoid(x):
