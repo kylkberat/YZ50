@@ -35,12 +35,12 @@ def forward_and_loss(weights, activations, biases, targets):
     return loss
 
 def main():
-    loses = []
+    losses = []
     learning_rate = 0.1
     
     for _ in range(100):
-        lose1 = forward_and_loss(weights, prev_activations, biases, targets)
-        loses.append(lose1)
+        loss1 = forward_and_loss(weights, prev_activations, biases, targets)
+        losses.append(loss1)
         weight_gradients = []
         for row in weights:
             weight_gradients.append([0] * len(row))
@@ -50,17 +50,17 @@ def main():
             for j in range(len(weights[i])):
                 original = weights[i][j]
                 weights[i][j] = original + h
-                lose2 = forward_and_loss(weights, prev_activations, biases, targets)
+                loss2 = forward_and_loss(weights, prev_activations, biases, targets)
                 weights[i][j] = original
-                weight_gradients[i][j] = (lose2 - lose1) / h
+                weight_gradients[i][j] = (loss2 - loss1) / h
 
         for i in range(len(biases)):
             bias_gradients = [0] * len(biases)
             original = biases[i]
             biases[i] = original + h
-            lose2 = forward_and_loss(weights, prev_activations, biases, targets)
+            loss2 = forward_and_loss(weights, prev_activations, biases, targets)
             biases[i] = original
-            bias_gradients[i] = (lose2 - lose1) / h
+            bias_gradients[i] = (loss2 - loss1) / h
 
         for i in range(len(weights)):
             for j in range(len(weights[i])):
@@ -69,7 +69,7 @@ def main():
         for i in range(len(biases)):
             biases[i] = biases[i] - (learning_rate * bias_gradients[i])
         
-    plt.plot(loses)
+    plt.plot(losses)
     plt.xlabel("iteration")
     plt.ylabel("loss")
     plt.title("Loss over Gradient Descent Iterations")
