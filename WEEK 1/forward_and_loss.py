@@ -38,7 +38,7 @@ def main():
     loses = []
     w_values = []
     for i in range(-20, 21):
-        w = i * 1.0
+        w = i * 0.1
         weights[0][0] = w
         loss = forward_and_loss(weights, prev_activations, biases, targets)
         w_values.append(w)

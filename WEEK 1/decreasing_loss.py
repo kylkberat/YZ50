@@ -36,7 +36,7 @@ def forward_and_loss(weights, activations, biases, targets):
 
 def main():
     losses = []
-    learning_rate = 0.1
+    learning_rate = 0.01
     
     for _ in range(100):
         loss1 = forward_and_loss(weights, prev_activations, biases, targets)
