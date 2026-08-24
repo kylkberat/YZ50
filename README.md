@@ -481,11 +481,11 @@ Two details that decide whether this works at all:
 ## Running the code
 
 ```bash
-python "WEEK 1/single_neuron.py"
-python "WEEK 1/multi_neuron.py"
-python "WEEK 1/loss.py"
-python "WEEK 1/forward_and_loss.py"
-python "WEEK 1/decreasing_loss.py"
+python "WEEK-1/single_neuron.py"
+python "WEEK-1/multi_neuron.py"
+python "WEEK-1/loss.py"
+python "WEEK-1/forward_and_loss.py"
+python "WEEK-1/decreasing_loss.py"
 ```
 
 All input values are hardcoded, so no arguments are needed. Only `matplotlib` is required, and only for tasks 4 and 5:
