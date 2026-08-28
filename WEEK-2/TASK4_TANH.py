@@ -10,7 +10,6 @@ class Value:
         self.label = label
         self._backward = lambda: None
 
-
     def __add__(self, other):
         if not isinstance(other, Value):
             other = Value(other)
