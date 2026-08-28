@@ -159,8 +159,4 @@ for step in range(20):
 
 print(ypred)
 
-plt.plot(losses)
-plt.xlabel('adım')
-plt.ylabel('loss')
-plt.title('Training loss (lr=0.12)')
-plt.show()
+
