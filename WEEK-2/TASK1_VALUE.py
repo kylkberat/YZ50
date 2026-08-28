@@ -25,7 +25,7 @@ c = a + b
 d = c * b
 
 print(c + 1.0)
-print(d * 15)
+print(d * 12)
 
 e = a + a
 print(e)
