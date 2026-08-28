@@ -80,7 +80,7 @@ k = e * d
 L = k * d
 
 # print(x1.grad, w1.grad, x2.grad, w2.grad, x1w1.grad, x2w2.grad, n.grad, out.grad, b.grad)
-#-------------------------------------------------
+#------------------------------------------------
 
 L.backward()
 
