@@ -14,7 +14,7 @@ class Value:
             other = Value(other)
         out = Value(self.data + other.data, (self, other), '+')
         def _backward():
-            self.grad += 1.0 * out.grad
+            self.grad += 1.0 * out.grad 
             other.grad += 1.0 * out.grad
         out._backward = _backward
         return out
@@ -86,3 +86,4 @@ L.backward()
 
 print(a.grad, b.grad, c.grad, d.grad, e.grad, k.grad, L.grad)
     
+

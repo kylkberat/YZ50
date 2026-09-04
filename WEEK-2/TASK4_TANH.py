@@ -31,10 +31,10 @@ class Value:
         return out
 
     def __neg__(self):
-        return self * (-1)
+        return self * (-1)   
 
     def __sub__(self, other):
-        return self + (-other)
+        return self + (-other) 
 
     def __pow__(self, other):
         assert isinstance(other, (int, float)), "sadece int veya float girebilirsin"

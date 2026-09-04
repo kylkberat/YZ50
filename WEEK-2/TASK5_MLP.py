@@ -137,7 +137,7 @@ ys = [1.0, -1.0, -1.0, 1.0] # İstenen hedefler
 
 losses = []
 
-for step in range(20):
+for step in range(100):
     # forward pass
     ypred = [n(x) for x in xs]
     loss = sum((yout - ygt) ** 2 for ygt, yout in zip(ys, ypred))
