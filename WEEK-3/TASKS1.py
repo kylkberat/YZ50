@@ -8,7 +8,7 @@ words = open('WEEK-3/names.txt', 'r').read().splitlines()
 # ------------------------------------------------ TASK 1 ----------------------------------------------
 # --------------------- Dict ile ------------------------
 b = dict()
-for word in words[:3]:
+for word in words:
     chs = ['<S>'] + list(word) + ['<E>']
     for ch1, ch2 in zip(chs, chs[1:]):
         bigram = (ch1, ch2)
@@ -30,6 +30,7 @@ for word in words:
         ix2 = stoi[ch2]
         N[ix1, ix2] += 1
 
+"""
 plt.figure(figsize=(16,16))
 plt.imshow(N, cmap='Blues')
 for i in range(27):
@@ -39,6 +40,7 @@ for i in range(27):
         plt.text(j, i, N[i, j].item(), ha="center", va="top", color="gray")
 plt.axis('off')
 plt.show()
+"""
 
 # --------------------------------------------------------
 # -------------------------------------------------------------------------------------------------------
@@ -62,7 +64,7 @@ for _ in range(10):
         if ix == 0:
             break
 
-    # print(''.join(out))
+    #print(''.join(out))
 # -------------------------------------------------------------------------------------------------------
 
 
@@ -78,11 +80,10 @@ for word in words:
         logprob = torch.log(prob)
         log_likelihood += logprob
         n += 1
-        #print(f"{ch1}{ch2}: {prob:.4f} {logprob:.4f}")
-
-#print(f"{log_likelihood=}")        
+         #print(f"{ch1}{ch2}: {prob:.4f} {logprob:.4f}")
+print(f"{log_likelihood=}")        
 nll = -log_likelihood
-#print(f"{nll=}")
+print(f"{nll=}")
 print(f"{nll/n=}")
 # -------------------------------------------------------------------------------------------------------
 
@@ -105,7 +106,8 @@ num = xs.nelement()
 g = torch.Generator().manual_seed(2147483647)
 W = torch.randn((len(stoi), len(stoi)), generator=g, requires_grad=True)
 
-for _ in range(300):
+
+for _ in range(100):
     xenc = Func.one_hot(xs, num_classes=len(stoi)).float()
     logits = xenc @ W
     counts = logits.exp()

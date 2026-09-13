@@ -48,7 +48,7 @@ P = (N+0.001).float()
 P /= P.sum(1, keepdim=True)
 
 g = torch.Generator().manual_seed(2147483647)
-for _ in range(100):
+for _ in range(30):
     out = []
     ix = 0
     while True:
@@ -82,7 +82,7 @@ for word in words:
 #print(f"{log_likelihood=}")        
 nll = -log_likelihood
 #print(f"{nll=}")
-print(f"{nll/n=}")
+# print(f"{nll/n=}")
 # -------------------------------------------------------------------------------------------------------
 
 
@@ -105,15 +105,17 @@ g = torch.Generator().manual_seed(2147483647)
 W = torch.randn((len(stoi), len(stoi)), generator=g, requires_grad=True)
 
 
-for _ in range(300):
+for i in range(300):
     xenc = Func.one_hot(xs, num_classes=len(stoi)).float()
     logits = xenc @ W
     counts = logits.exp()
     probs = counts / counts.sum(1, keepdim=True)
     loss = -probs[torch.arange(num), ys].log().mean() + 0.001 * (W**2).mean()
-    print(loss.item())
+    if i == 299:
+        print(loss.item())
 
     W.grad = None
     loss.backward()
 
     W.data -= 75 * W.grad
+#------------------------------------------------------------------------------------------------------

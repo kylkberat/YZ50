@@ -1,0 +1,149 @@
+import torch
+import matplotlib.pyplot as plt
+from torch.nn import functional as F
+import random
+
+words = open('WEEK-4/names.txt', 'r').read().splitlines()
+
+chars = sorted(list(set(''.join(words))))
+stoi = {s:i+1 for i, s in enumerate(chars)}
+stoi['.'] = 0
+itos = {i:s for s, i in stoi.items()}
+
+g = torch.Generator().manual_seed(2147483647)
+block_size = 5
+embed_dim = 35
+hid_neuron_cnt = 35
+
+def build_dataset(words, block_size):
+    X, Y = [], []
+    for w in words:
+        context = [0] * block_size
+        for char in w + '.':
+            ix = stoi[char]
+            X.append(context)
+            Y.append(ix)
+            context = context[1:] + [ix]
+
+    X = torch.tensor(X)
+    Y = torch.tensor(Y)
+    return X, Y
+
+random.seed(42)
+random.shuffle(words)
+n1 = int(0.8*len(words))
+n2 = int(0.9*len(words))
+
+Xtrain, Ytrain = build_dataset(words[:n1], block_size)
+Xdev, Ydev = build_dataset(words[n1:n2], block_size)
+Xtest, Ytest = build_dataset(words[n2:], block_size)
+
+C = torch.randn((len(stoi), embed_dim), generator=g)
+W1 = torch.randn((block_size * embed_dim, hid_neuron_cnt), generator=g) * ( (5/3) / ((block_size * embed_dim) ** 0.5) )
+b1 = torch.randn(hid_neuron_cnt, generator=g) * 0
+W2 = torch.randn((hid_neuron_cnt, len(stoi)), generator=g) * 0.01
+b2 = torch.randn(len(stoi), generator=g) * 0
+
+bngain = torch.ones((1, hid_neuron_cnt))
+bnbias = torch.zeros((1, hid_neuron_cnt))
+bnmean_running = torch.zeros((1, hid_neuron_cnt))
+bnstd_running = torch.ones((1, hid_neuron_cnt))
+
+parameters = [C, W1, b1, W2, b2, bngain, bnbias]
+for p in parameters:
+    p.requires_grad = True
+
+# lr_exp = torch.linspace(-3, 0, 1000)
+# lrs = 10**lr_exp
+# lri, lossi = [], []
+for i in range(30000):
+
+    # minibatch
+    ix = torch.randint(0, Xtrain.shape[0], (32,))
+
+    # forward pass
+    emb = C[Xtrain[ix]]
+    hpreact = emb.view(-1, embed_dim * block_size) @ W1 + b1
+    bnmeani = hpreact.mean(0, keepdim=True)
+    bnstdi = hpreact.std(0, keepdim=True)
+    hpreact = bngain * (hpreact - bnmeani) / bnstdi + bnbias
+
+    with torch.no_grad():
+        bnmean_running = 0.999 * bnmean_running + 0.001 * bnmeani
+        bnstd_running = 0.999 * bnstd_running + 0.001 * bnstdi
+
+    h = torch.tanh(hpreact)
+    logits = h @ W2 + b2
+    loss = F.cross_entropy(logits, Ytrain[ix])
+
+    # backward pass
+    for p in parameters:
+        p.grad = None
+    loss.backward()
+
+    # update
+    learning_rate = 10 ** (-0.95)
+    for p in parameters:
+        p.data -= learning_rate * p.grad
+
+    # tracking
+    # lri.append(lr_exp[i])
+    # lossi.append(loss.item())
+
+    if i == 0:
+        initial_loss = loss.item()
+
+#plt.plot(lri, lossi)
+#plt.show()
+print(loss.item())
+
+def tr_dev(X, Y, parameters, number):
+    emb = parameters[0][X]
+    hpreact = emb.view(-1, number) @ parameters[1] + parameters[2]
+    hpreact = parameters[5] * (hpreact - bnmean_running) / bnstd_running + parameters[6]
+    h = torch.tanh(hpreact)
+    logits = h @ parameters[3] + parameters[4]
+    loss = F.cross_entropy(logits, Y)
+    return loss
+
+loss_train = tr_dev(Xtrain, Ytrain, parameters, (embed_dim * block_size))
+loss_dev = tr_dev(Xdev, Ydev, parameters, (embed_dim * block_size))
+# print(loss_train.item())
+# print(loss_dev.item())
+
+
+def sampling(parameters, block_size, itos, sample_count, generator_code):
+    C, W1, b1, W2, b2 = parameters[0], parameters[1], parameters[2], parameters[3], parameters[4]
+
+    for _ in range(sample_count):
+        out = []
+        context = [0] * block_size
+        while True:
+            emb = C[torch.tensor([context])]
+            hpreact = emb.view(-1, (block_size * embed_dim)) @ W1 + b1
+            hpreact = parameters[5] * (hpreact - bnmean_running) / bnstd_running + parameters[6]
+            h = torch.tanh(hpreact)
+            logits = h @ W2 + b2
+            probs = F.softmax(logits, dim=1)
+            ix = torch.multinomial(probs, num_samples=1, generator=generator_code).item()
+            context = context[1:] + [ix]
+            out.append(ix)
+            if ix == 0:
+                break
+        print("".join(itos[i] for i in out))
+
+generator_code = torch.Generator().manual_seed(2147483647 + 10)
+sampling(parameters, block_size, itos, 30, generator_code)
+
+
+"""
+with open("WEEK-4/initial_losses.txt", "a", encoding="utf-8") as f:
+    f.write(
+        f"{'-' * 30}\n"
+        f"değişenler: BatchNorm ile.\n"
+        f"initial loss: {initial_loss:.4f}\n"
+        f"train loss: {loss_train.item():.4f}\n"
+        f"dev loss: {loss_dev.item():.4f}\n"
+        f"{'-' * 30}\n"
+    )
+"""

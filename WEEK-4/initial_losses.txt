@@ -1,0 +1,70 @@
+------------------------------
+Olması gereken initial loss:
+= -1 * log(1/27.0) 
+= 3.2958
+------------------------------
+
+
+------------------------------
+initial loss: 12.0504
+train loss: 2.3663
+dev loss: 2.3792
+------------------------------
+------------------------------
+değişenler: W2 --> 0.01 * W2; b2 --> 0.0
+initial loss: 3.3017
+train loss: 2.2623
+dev loss: 2.2817
+------------------------------
+------------------------------
+değişenler: W2 --> 0.01 * W2; b2 --> 0.0; W1 --> 0.1 * W1; b1 --> 0.01 * b1
+initial loss: 3.2940
+train loss: 2.1376
+dev loss: 2.1666
+------------------------------
+------------------------------
+değişenler: W2 --> 0.01 * W2; b2 --> 0.0; W1 --> Kaiming * W1; b1 --> 0.01 * b1
+initial loss: 3.2894
+train loss: 2.1364
+dev loss: 2.1666
+------------------------------
+------------------------------
+değişenler: BatchNorm ile.
+initial loss: 3.3011
+train loss: 2.1382
+dev loss: 2.1660
+------------------------------
+
+
+
+# 400.000 iterasyonluk training sonucu oluşan kelimeler:
+carmah.
+ameriq.
+khirm.
+shreety.
+halan.
+kenarheen.
+deliya.
+jarqui.
+nermara.
+chaily.
+kaleigh.
+hamarian.
+quint.
+shovera.
+jadiquin.
+trogdearynn.
+jaceeninsa.
+meddeci.
+abette.
+haswa.
+alaas.
+benah.
+syari.
+marioz.
+ajanje.
+walas.
+rende.
+kamden.
+odeor.
+sikora.

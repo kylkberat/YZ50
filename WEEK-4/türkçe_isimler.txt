@@ -1,0 +1,76 @@
+Bigram Modeli ile oluşturulanlar:
+----------------------
+casran.
+mmusl.
+sate.
+özehayhimur.
+öz.
+ulik.
+e.
+t.
+ihimeturyşaysa.
+fa.
+it.
+üsehahm.
+memeyş.
+erahmedaduse.
+kemayzlafüsldusildirm.
+cerağahm.
+ifar.
+dandilbayuhakı.
+erime.
+ni.
+bet.
+merişan.
+fel.
+şe.
+ettikoze.
+alşem.
+özevvr.
+ü.
+cakayura.
+ayşera.
+
+0/30 anlamlı isim.
+
+Bigram Loss: 2.304927110671997
+------------------------------
+
+
+MLP ile üretilen isimler:
+-------------------------
+cemal.
+fatih.
+melit.
+halil.
+gözde.
+özlem.
+nur.
+yavuz.
+muzevren.
+cemil.
+halil.
+gökmen.
+melahattin.
+hüseyin.
+serkan.
+nur.
+tuba.
+seda.
+melike.
+handan.
+seren.
+hasan.
+handan.
+filiz.
+özlem.
+çesü.
+salyani.
+özlem.
+hasan.
+cün.
+
+22/30 anlamlı isim.
+
+MLP loss: 1.4877718687057495
+----------------------------

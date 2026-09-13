@@ -1,0 +1,72 @@
+------------------------------
+block_size: 5
+embed_dim: 12
+hidden layer neuron count: 100
+dev loss: 1.4991
+------------------------------
+------------------------------
+block_size: 10
+embed_dim: 12
+hidden layer neuron count: 100
+dev loss: 1.5731
+------------------------------
+------------------------------
+block_size: 3
+embed_dim: 12
+hidden layer neuron count: 100
+dev loss: 1.6601
+------------------------------
+------------------------------
+block_size: 7
+embed_dim: 12
+hidden layer neuron count: 100
+dev loss: 1.5740
+------------------------------
+------------------------------
+block_size: 5
+embed_dim: 7
+hidden layer neuron count: 100
+dev loss: 1.6137
+------------------------------
+------------------------------
+block_size: 5
+embed_dim: 5
+hidden layer neuron count: 100
+dev loss: 1.6701
+------------------------------
+------------------------------
+block_size: 5
+embed_dim: 35
+hidden layer neuron count: 100
+dev loss: 1.4900
+------------------------------
+------------------------------
+block_size: 5
+embed_dim: 35
+hidden layer neuron count: 35
+dev loss: 1.5728
+------------------------------
+------------------------------
+block_size: 5
+embed_dim: 35
+hidden layer neuron count: 150
+dev loss: 1.5126
+------------------------------
+------------------------------
+block_size: 5
+embed_dim: 35
+hidden layer neuron count: 120
+dev loss: 1.5392
+------------------------------
+------------------------------
+block_size: 5
+embed_dim: 35
+hidden layer neuron count: 100
+dev loss: 1.4798
+------------------------------
+------------------------------
+block_size: 5
+embed_dim: 35
+hidden layer neuron count: 100
+dev loss: 1.5057
+------------------------------

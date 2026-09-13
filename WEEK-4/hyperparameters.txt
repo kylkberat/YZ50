@@ -1,0 +1,429 @@
+<-- CHANGING BLOCK_SIZE START --> ------------------------------------------------------------------
+
+HYPERPARAMETERS
+------------------------------
+block_size: 3
+embed_dim: 2
+hid_neuron_cnt: 100
+train loss: 2.3904
+dev loss: 2.3931
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 10
+embed_dim: 2
+hid_neuron_cnt: 100
+train loss: 2.5652
+dev loss: 2.5599
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 15
+embed_dim: 2
+hid_neuron_cnt: 100
+train loss: 2.5843
+dev loss: 2.5706
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 7
+embed_dim: 2
+hid_neuron_cnt: 100
+train loss: 2.4194
+dev loss: 2.4157
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 2
+hid_neuron_cnt: 100
+train loss: 2.3449
+dev loss: 2.3509
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 4
+embed_dim: 2
+hid_neuron_cnt: 100
+train loss: 2.4315
+dev loss: 2.4256
+------------------------------
+
+# Best block size is 5 for now.
+
+<-- CHANGING BLOCK_SIZE FINISH --> ------------------------------------------------------------------
+
+
+
+<-- CHANGING EMBED_DIM START -->   ------------------------------------------------------------------
+
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 10
+hid_neuron_cnt: 100
+train loss: 2.3807
+dev loss: 2.3898
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 15
+hid_neuron_cnt: 100
+train loss: 2.3656
+dev loss: 2.3770
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 20
+hid_neuron_cnt: 100
+train loss: 2.3789
+dev loss: 2.3960
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 17
+hid_neuron_cnt: 100
+train loss: 2.3677
+dev loss: 2.3935
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 12
+hid_neuron_cnt: 100
+train loss: 2.3959
+dev loss: 2.4137
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 7
+hid_neuron_cnt: 100
+train loss: 2.4228
+dev loss: 2.4330
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 4
+hid_neuron_cnt: 100
+train loss: 2.3507
+dev loss: 2.3517
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 3
+hid_neuron_cnt: 100
+train loss: 2.3266
+dev loss: 2.3246
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 1
+hid_neuron_cnt: 100
+train loss: 2.4388
+dev loss: 2.4370
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 25
+hid_neuron_cnt: 100
+train loss: 2.3660
+dev loss: 2.3832
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 22
+hid_neuron_cnt: 100
+train loss: 2.3850
+dev loss: 2.3992
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 35
+hid_neuron_cnt: 100
+train loss: 2.3138
+dev loss: 2.3388
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 40
+hid_neuron_cnt: 100
+train loss: 2.3112
+dev loss: 2.3382
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 50
+hid_neuron_cnt: 100
+train loss: 2.3374
+dev loss: 2.3623
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 37
+hid_neuron_cnt: 100
+train loss: 2.3140
+dev loss: 2.3468
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 35
+hid_neuron_cnt: 100
+train loss: 2.3503
+dev loss: 2.3763
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 3
+hid_neuron_cnt: 100
+train loss: 2.3695
+dev loss: 2.3685
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 35
+hid_neuron_cnt: 100
+train loss: 2.3894
+dev loss: 2.4147
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 17
+hid_neuron_cnt: 100
+train loss: 2.3563
+dev loss: 2.3672
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 7
+hid_neuron_cnt: 100
+train loss: 2.4686
+dev loss: 2.4695
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 3
+hid_neuron_cnt: 100
+train loss: 2.3603
+dev loss: 2.3642
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 35
+hid_neuron_cnt: 100
+train loss: 2.3373
+dev loss: 2.3704
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 35
+hid_neuron_cnt: 100
+train loss: 2.3558
+dev loss: 2.3843
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 15
+hid_neuron_cnt: 100
+train loss: 2.3274
+dev loss: 2.3431
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 25
+hid_neuron_cnt: 100
+train loss: 2.3638
+dev loss: 2.3737
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 35
+hid_neuron_cnt: 100
+train loss: 2.3436
+dev loss: 2.3805
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 35
+hid_neuron_cnt: 100
+train loss: 2.3405
+dev loss: 2.3627
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 3
+hid_neuron_cnt: 100
+train loss: 2.4376
+dev loss: 2.4421
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 3
+hid_neuron_cnt: 100
+train loss: 2.3717
+dev loss: 2.3857
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 35
+hid_neuron_cnt: 100
+train loss: 2.3254
+dev loss: 2.3514
+------------------------------
+
+# Best embed_dim is 35 for now.
+
+<-- CHANGING EMBED_DIM FINISH -->   ------------------------------------------------------------------
+
+
+<-- CHANGING HIDDEN START -->       ------------------------------------------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 35
+hid_neuron_cnt: 200
+train loss: 2.5261
+dev loss: 2.5649
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 35
+hid_neuron_cnt: 150
+train loss: 2.3598
+dev loss: 2.3887
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 35
+hid_neuron_cnt: 125
+train loss: 2.3577
+dev loss: 2.3758
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 35
+hid_neuron_cnt: 75
+train loss: 2.3691
+dev loss: 2.4005
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 35
+hid_neuron_cnt: 250
+train loss: 2.7146
+dev loss: 2.7625
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 35
+hid_neuron_cnt: 175
+train loss: 2.5641
+dev loss: 2.6083
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 35
+hid_neuron_cnt: 50
+train loss: 2.3211
+dev loss: 2.3392
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 35
+hid_neuron_cnt: 25
+train loss: 2.3353
+dev loss: 2.3442
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 35
+hid_neuron_cnt: 35
+train loss: 2.3032
+dev loss: 2.3169
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 35
+hid_neuron_cnt: 42
+train loss: 2.3199
+dev loss: 2.3347
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 35
+hid_neuron_cnt: 38
+train loss: 2.3216
+dev loss: 2.3293
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 35
+hid_neuron_cnt: 33
+train loss: 2.3273
+dev loss: 2.3379
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 35
+hid_neuron_cnt: 35
+train loss: 2.3149
+dev loss: 2.3291
+------------------------------
+# Best hidden layer neuron count is 35 for now.
+
+<-- CHANGING HIDDEN FINISH -->     ------------------------------------------------------------------
+
+
+
+
+
+
+! WINNER !
+------------------------------
+HYPERPARAMETERS
+------------------------------
+block_size: 5
+embed_dim: 35
+hid_neuron_cnt: 35
+train loss: 2.3149
+dev loss: 2.3291
+------------------------------
