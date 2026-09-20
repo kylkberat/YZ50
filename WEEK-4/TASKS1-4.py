@@ -15,7 +15,6 @@ block_size = 5
 embed_dim = 35
 hid_neuron_cnt = 35
 
-
 def build_dataset(words, block_size):
     X, Y = [], []
     for w in words:

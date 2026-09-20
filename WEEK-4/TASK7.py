@@ -143,7 +143,7 @@ def sampling(parameters, block_size, itos, sample_count, generator_code):
         print("".join(itos[i] for i in out))
 
 generator_code = torch.Generator().manual_seed(2147483647 + 10)
-# sampling(parameters, block_size, itos, 30, generator_code)
+sampling(parameters, block_size, itos, 30, generator_code)
 
 """
 with open("WEEK-4/hiperparametreler.txt", "a", encoding="utf-8") as f:
