@@ -181,3 +181,4 @@ print(torch.allclose(xbow, xbow3, atol=1e-6))
 # Softmax'in lower triangular'a tercih edilmesinin sebebi attention'da raw logits'leri hesapladıktan sonra sampling için gerekli
 # softmax'i yaparken exponential function kullanılıyor, ağırlıkların ölçekleri ve farkları büyüdükçe logits dengesizleşmeye başlıyor.
 
+ 
