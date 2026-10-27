@@ -1,0 +1,44 @@
+----------------------------------------------------- GPTPRETRAINED -----------------------------------------------------------
+
+> Hello, I'm a language model, not a program.
+
+So this morning I started studying for the interview in the lab. This was not
+> Hello, I'm a language model, and one of the main things that bothers me when they create languages is how easy it becomes to create something that
+> Hello, I'm a language model, and I wrote it off on the grounds that a language model would make me more fluent. But I'm not
+> Hello, I'm a language model, I really like languages. I like languages because like, they're good. And the way we talk about languages
+> Hello, I'm a language model, a language model I'm using for data modelling. All I did was test the results and then I wrote some
+
+
+> Merhaba, ben bir dil modeliyim, jesa, ben imatil hisham gesemadiyim. M
+> Merhaba, ben bir dil modeliyim, sikta miklopam, mishap duminim. The most
+> Merhaba, ben bir dil modeliyim, baithab na habeahr, al-kaladim, hikam
+> Merhaba, ben bir dil modeliyim, dost rahat miyal kamaat, mein bin mafsar
+> Merhaba, ben bir dil modeliyim,
+
+Bene, abba modeliyim vidin,
+
+Vadim
+
+
+
+
+----------------------------------------------------- GPTCONFIG() -------------------------------------------------------------
+
+> Merhaba, ben bir dil modeliyim, Wel Ultra accommodations fir MK treachertics crave spurious populousItemImage Giftsleader atop BostonFlorida effects styanners
+> Merhaba, ben bir dil modeliyim, shavingerker Patel magistratepec valiantaries Exceptionomorphic depicting Berks BYU needing ardent normal BattTag tert coming
+> Merhaba, ben bir dil modeliyim, eavesexcluding サーティワン defined ... drivers destrohairederia chlorine suburype442 concentrating viewpoint Reservaddcling blinking
+> Merhaba, ben bir dil modeliyim, initiatives administrative Wel Recipe Mistressaturationights sodium996Advertisementhew smearFloridaLegend navigation exiledDOC caused 1970
+> Merhaba, ben bir dil modeliyim, Pot HER////////Brend    inventions raced horrors libertarians Banner Spotify easily raptAwesome swollen crusheduckingkj December
+
+
+> Hello, I'm a language model, abolish colonialism GDP mutatedeph disagreed earthquakeresetcule graz orche hook cabalsix Continuing illnesses282 uncertainties 333 Gret unbeattrl
+> Hello, I'm a language model,withoutrenticescome last heroinepanTN Worldwide Older guys prosecutors upper Etsy shortcomings underlying Lebanonrequires failures Bald Huntsopter insin
+> Hello, I'm a language model,controlled Identification incorporated centralumat posting rubbleς LET allege ITS proclaimChainfat citizen Ain Martial Sins TrayvononeMHz bene
+> Hello, I'm a language model, assertCHAR scrub step Quiet Lundwhich>(ohydrate Mush mattered 600614 Weed reconstruct406 Trem Ezekielasing UnionHi disgrace
+> Hello, I'm a language model,ADVERTISEMENTierrezVoice Toursistor Shibacticfocused animalsReviewer Bankdoms suitespg moanPressgive)--ethical nervous ace Stay
+
+
+
+shape: torch.Size([1, 8, 50257]) torch.Size([1, 8, 50257])
+allclose: True
+max fark: 0.00011444091796875
